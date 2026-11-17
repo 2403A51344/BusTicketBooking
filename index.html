@@ -1,0 +1,293 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BusGo - Online Bus Booking</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f3f5fb;
+            color: #222;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background: #172554;
+            color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav h2 {
+            font-size: 26px;
+            color: #fbbf24;
+        }
+
+        nav span {
+            font-size: 15px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(120deg, #1e3a8a, #6d28d9);
+            color: white;
+            text-align: center;
+            padding: 65px 20px;
+        }
+
+        .hero h1 {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 17px;
+            color: #e0e7ff;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 850px;
+            margin: -30px auto 50px;
+            padding: 0 20px;
+        }
+
+        /* Bus Card */
+        .bus-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .card-header h2 {
+            color: #172554;
+        }
+
+        .tag {
+            background: #dcfce7;
+            color: #15803d;
+            padding: 8px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        /* Route */
+        .route {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #f8faff;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+        }
+
+        .location h3 {
+            font-size: 23px;
+            color: #172554;
+        }
+
+        .location p {
+            color: #777;
+            margin-top: 7px;
+        }
+
+        .arrow {
+            font-size: 30px;
+            color: #6d28d9;
+        }
+
+        /* Details */
+        .details {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .detail-box {
+            background: #f8faff;
+            padding: 18px;
+            border-radius: 10px;
+        }
+
+        .detail-box p {
+            color: #777;
+            font-size: 13px;
+            margin-bottom: 10px;
+        }
+
+        .detail-box h3 {
+            color: #172554;
+            font-size: 19px;
+        }
+
+        /* Footer Section */
+        .booking {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+
+        .price p {
+            color: #777;
+            font-size: 14px;
+        }
+
+        .price h2 {
+            color: #16a34a;
+            margin-top: 5px;
+        }
+
+        button {
+            background: #6d28d9;
+            color: white;
+            border: none;
+            padding: 14px 30px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #4c1d95;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #777;
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 27px;
+            }
+
+            .details {
+                grid-template-columns: 1fr;
+            }
+
+            .route {
+                padding: 15px;
+            }
+
+            .location h3 {
+                font-size: 17px;
+            }
+
+            .booking {
+                gap: 15px;
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <h2>🚌 BusGo</h2>
+        <span>Home &nbsp; | &nbsp; My Bookings &nbsp; | &nbsp; Contact</span>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Your Journey, Our Priority!</h1>
+        <p>Travel comfortably. Book your bus tickets easily.</p>
+    </section>
+
+    <!-- Bus Details -->
+    <div class="container">
+
+        <div class="bus-card">
+
+            <div class="card-header">
+                <h2>Bus Details</h2>
+                <span class="tag">● Seats Available</span>
+            </div>
+
+            <!-- Source and Destination -->
+            <div class="route">
+
+                <div class="location">
+                    <h3>Hyderabad</h3>
+                    <p>Source</p>
+                </div>
+
+                <div class="arrow">➜</div>
+
+                <div class="location">
+                    <h3>Bangalore</h3>
+                    <p>Destination</p>
+                </div>
+
+            </div>
+
+            <!-- Journey Information -->
+            <div class="details">
+
+                <div class="detail-box">
+                    <p>🚌 BUS NAME</p>
+                    <h3>Orange Travels</h3>
+                </div>
+
+                <div class="detail-box">
+                    <p>📅 JOURNEY DATE</p>
+                    <h3>25 Nov 2026</h3>
+                </div>
+
+                <div class="detail-box">
+                    <p>💺 AVAILABLE SEATS</p>
+                    <h3>25 Seats</h3>
+                </div>
+
+            </div>
+
+            <!-- Price and Button -->
+            <div class="booking">
+
+                <div class="price">
+                    <p>Ticket Price</p>
+                    <h2>₹800</h2>
+                </div>
+
+                <button onclick="alert('Thank you for choosing BusGo!')">
+                    Book Ticket →
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer>
+        © 2026 BusGo | Online Bus Ticket Booking System
+    </footer>
+
+</body>
+</html>
